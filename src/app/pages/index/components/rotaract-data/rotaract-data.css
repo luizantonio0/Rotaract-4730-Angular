@@ -1,0 +1,26 @@
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container-card{
+    display: flex;
+    flex-direction: column;
+    justify-content: top;
+    align-items: center;
+    width: 80vw;
+    height: 80vh;
+    border: 10px solid var(--puple-color);
+    border-radius: 10vh;
+}
+.title{
+    background-color: var(--puple-color);
+    width: 60vw;
+    height: 10vh;
+    border-radius: 0 0 5vh 5vh ;
+}
+h2{
+    text-align: center;
+    color: var(--main-text-color);
+    font-size: 3vw;
+}

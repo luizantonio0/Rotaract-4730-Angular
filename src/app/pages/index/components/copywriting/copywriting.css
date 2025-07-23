@@ -1,0 +1,22 @@
+h2, p{
+    color: var(--puple-color);
+}
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10vh;
+}
+.container-text{
+    display: flex;
+    flex-direction: column;
+    width: 80vw;
+}
+h2{
+    font-size: 3vw;
+    text-align: center;
+}
+p{
+    font-size: 1.8vw;
+    text-align: justify;
+}

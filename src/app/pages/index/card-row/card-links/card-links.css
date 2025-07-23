@@ -1,0 +1,39 @@
+.card{
+    position: relative;
+    overflow: hidden;
+    background-size: cover;        
+    background-position: center;   
+    background-repeat: no-repeat;
+    width: 17vw;
+    height: 17.5vw;
+    text-align: center;
+    border-radius: 3vw;
+    transition: transform 0.3s;
+}
+h2{
+    font-size: 2vw;
+    color: var(--main-text-color);
+    text-shadow: 0 0 10px rgba(0,0,0,0.6);
+}
+.card:hover{
+    cursor: pointer;
+    transform: translateY(-2vw);
+    transition: transform 0.3s;
+}
+
+.card::after {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0,0,0,0.5);
+    opacity: 0;
+    transition: opacity 0.3s;
+    pointer-events: none;
+    border-radius: 3vw;
+}
+.card:hover::after {
+    opacity: 1;
+}
+.card:active::after{
+    opacity: 2;
+}

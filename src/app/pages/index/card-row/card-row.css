@@ -1,0 +1,9 @@
+.container{
+    width: 65vw;
+    margin: auto;
+}
+.row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}

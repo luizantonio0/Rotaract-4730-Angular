@@ -1,0 +1,13 @@
+.container{
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+    text-align: center;
+    align-items: end;
+    height: 70%;
+}
+.title{
+    color: var(--main-text-color);
+    font-size: 10vh;
+    text-shadow: 0 0 10px rgba(0,0,0,0.8);
+}

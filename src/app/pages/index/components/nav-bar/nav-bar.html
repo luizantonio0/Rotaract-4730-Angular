@@ -1,0 +1,26 @@
+<header>
+    <nav class="nav-bar">
+        <div class="left-card">
+            <div class="logo">
+                <a [routerLink]="['/']">
+                    <img src="logo.svg" alt="aa">
+                </a>
+            </div>
+        </div>
+        <div class="right-card">
+            <div class="container-links">
+                <ul class="list-links" >
+                    <li class="list-element">
+                        <a [routerLink]="['/{{links[1]}}']">QUEM SOMOS</a>
+                    </li>
+                    <li class="list-element">
+                        <a [routerLink]="['/{{links[1]}}']">TRANPARÊNCIA</a>
+                    </li>
+                    <li class="list-element">
+                        <a [routerLink]="['/{{links[2]}}']">CONTATO</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>

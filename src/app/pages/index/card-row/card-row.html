@@ -1,0 +1,12 @@
+<div class="wrapper">
+    <div class="container">
+        <div class="row">
+            @for (card of cardList; track card) {
+                <app-card-links
+                [name]="card.name"
+                [image]="card.image"
+                ></app-card-links>
+            }
+        </div>
+    </div>
+</div>

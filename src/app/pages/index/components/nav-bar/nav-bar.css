@@ -1,0 +1,43 @@
+.nav-bar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 12vh;
+    width: 100%;
+    /* color: var(--main-text-color); */
+}
+
+.left-card, .right-card{
+    background-color: var(--puple-color);
+    border-radius: 0vh 0 3vh 3vh;
+}
+
+.left-card{
+    margin-left: 3vw;
+}
+.left-card img{
+    height: 10vh;
+    width: 10vw;
+    margin-top: 0;
+    margin: 0 1vw;
+    padding: 0;
+}
+.right-card{
+    display: flex;
+    margin-right: 3vw;
+    align-items: center;
+}
+.list-links{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    font-size: 3vh;
+    margin: 3vh 0;
+}
+.list-element{
+    margin: 0 1vw;
+}
+.list-element a{
+    text-decoration: none;
+    color: var(--main-text-color);
+}

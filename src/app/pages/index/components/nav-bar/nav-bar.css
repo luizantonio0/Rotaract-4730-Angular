@@ -4,7 +4,7 @@
     justify-content: space-between;
     height: 12vh;
     width: 100%;
-    /* color: var(--main-text-color); */
+    color: var(--main-text-color);
 }
 
 .left-card, .right-card{
@@ -48,4 +48,41 @@
 .list-element a:active{
     text-decoration: underline;
     color: #300d30;
+}
+.container-menu button{
+        background: none;
+        border: none;
+        box-shadow: none;
+        color: inherit;
+        padding: 0;
+        font: inherit;
+        cursor: pointer;
+    }
+.bi{
+    color: var(--main-text-color);
+    height: 9vh;
+    width: 9vh;
+}
+.card-menu{
+    display: none;
+}
+
+@media (max-width: 600px){
+    .container-links{
+        display: none;
+    }
+    .left-card img{
+    height: 10vh;
+    width: 40vw;
+    }
+    .card-menu{
+        display: flex;
+        width: 50vw;
+        height: fit-content;
+        background-color: #18800f;
+        transform: translateY(12vh);
+    }
+    .list-links{
+        flex-direction: column;
+    }
 }

@@ -1,8 +1,19 @@
 <div class="container">
     
-    <div class="container-card">
-        <div class="title">
+    <div class="container-card" [style]="'border: 20px solid' + bgColor + ';'">
+        <div class="container-card-title" [style]="'background-color:' + bgColor + ';'">
             <h2>Números do Rotaract</h2>
+        </div>
+        <div class="container-card-content">
+            @for (item of items; track item) {
+                <div class="container-card-content-item">
+                    @if (item.icon != null) {
+                        <img [src]="item?.icon" alt="">
+                    }
+                    <h3>{{(item?.quantity ?? '') + (item?.unitMeasure ?? '')}}</h3>
+                    <p>{{item.description}}</p>
+                </div>
+            }
         </div>
     </div>
 </div>

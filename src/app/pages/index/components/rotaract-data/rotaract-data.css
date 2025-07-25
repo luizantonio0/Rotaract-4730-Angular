@@ -1,4 +1,5 @@
 .container{
+    margin-top: 10vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -10,11 +11,9 @@
     align-items: center;
     width: 80vw;
     height: 80vh;
-    border: 10px solid var(--puple-color);
     border-radius: 10vh;
 }
-.title{
-    background-color: var(--puple-color);
+.container-card-title{
     width: 60vw;
     height: 10vh;
     border-radius: 0 0 5vh 5vh ;
@@ -23,4 +22,35 @@ h2{
     text-align: center;
     color: var(--main-text-color);
     font-size: 3vw;
+}
+.container-card-content{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2vw;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 5vh;
+    width: 70vw;
+    height: 60vh;
+}
+.container-card-content-item{
+    display: flex;
+    flex: 1 1 30%;
+    margin: auto;
+    align-items: center;
+    flex-direction: column;
+    width: max-content;
+    height: max-content;
+}
+.container-card-content-item h3, p{
+    text-align: center;
+}
+h3{
+    font-size: 4vw;
+    color: var(--puple-color);
+}
+img{
+
+    width: 5vw;
+    height: 5vw;
 }

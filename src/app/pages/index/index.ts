@@ -30,13 +30,13 @@ export class Index {
     
   ]
   rotaract2DataList: DataItem[] = [
-    {icon: './icon/desenvolvimento-pessoal.svg', description: "Desenvolvimento pessoal"},
-    {icon: './icon/networking.svg', description: "Networking"},
-    {icon: './icon/projetos-humanitarios.svg', description: "Projetos humanitários"},
-    {icon: './icon/lideranca.svg', description: "Liderança"},
-    {icon: './icon/gerenciamento-pessoas.svg', description: "Gerenciamento de pessoas"},
-    {icon: './icon/conexao-pessoas.svg', description: "Conexão de pessoas"},
-    {icon: './icon/rede-mundial.svg', description: "Rede mundial de jovens voluntários"}
+    { icon: './icon/desenvolvimento-pessoal.svg', description: "Desenvolvimento pessoal" },
+    { icon: './icon/networking.svg', description: "Networking" },
+    { icon: './icon/projetos-humanitarios.svg', description: "Projetos humanitários" },
+    { icon: './icon/lideranca.svg', description: "Liderança" },
+    { icon: './icon/gerenciamento-pessoas.svg', description: "Gerenciamento de pessoas" },
+    { icon: './icon/conexao-pessoas.svg', description: "Conexão de pessoas" },
+    { icon: './icon/rede-mundial.svg', description: "Rede mundial de jovens voluntários" }
   ]
 }
 

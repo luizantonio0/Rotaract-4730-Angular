@@ -41,3 +41,11 @@
     text-decoration: none;
     color: var(--main-text-color);
 }
+.list-element a:hover{
+    text-decoration: none;
+    color: #641964;
+}
+.list-element a:active{
+    text-decoration: underline;
+    color: #300d30;
+}

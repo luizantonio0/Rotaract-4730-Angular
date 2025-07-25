@@ -7,8 +7,5 @@ import {RouterLink} from '@angular/router';
   templateUrl: './nav-bar.html',
   styleUrl: './nav-bar.css'
 })
-export class NavBar { 
-    @Input() links: string[] = [
-      "", "", ""
-    ];
+export class NavBar {
 }

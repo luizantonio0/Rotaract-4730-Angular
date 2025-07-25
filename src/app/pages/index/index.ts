@@ -5,19 +5,15 @@ import { CardRow } from "./components/card-row/card-row";
 import { Copywriting } from "./components/copywriting/copywriting";
 import { RotaractData } from "./components/rotaract-data/rotaract-data";
 import { DataItem } from "./components/rotaract-data/rotaract-data"
+import { Footer } from "./components/footer/footer";
 
 @Component({
   selector: 'app-index',
-  imports: [NavBar, Apresentation, CardRow, Copywriting, RotaractData],
+  imports: [NavBar, Apresentation, CardRow, Copywriting, RotaractData, Footer],
   templateUrl: './index.html',
   styleUrl: './index.css'
 })
 export class Index {
-  links :string[] = [
-    "#",
-    "products",
-    "sasa"
-  ]
   rotaractDataList: DataItem[] = [
     { quantity: 60, unitMeasure: " anos", description: "de existência" },
     { quantity: 6, unitMeasure: " milhões", description: "arrecadados e doados em projetos" },

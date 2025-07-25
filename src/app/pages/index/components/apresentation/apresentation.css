@@ -9,5 +9,6 @@
 .title{
     color: var(--main-text-color);
     font-size: 10vh;
+    font-size: 4.5vw;
     text-shadow: 0 0 10px rgba(0,0,0,0.8);
 }

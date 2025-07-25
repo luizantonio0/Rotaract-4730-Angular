@@ -7,3 +7,8 @@
     flex-direction: row;
     justify-content: space-between;
 } 
+@media (max-width: 600px){
+    .container{
+        width: 95vw;
+    }
+}

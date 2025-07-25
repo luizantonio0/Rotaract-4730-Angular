@@ -37,3 +37,12 @@ h2{
 .card:active::after{
     opacity: 2;
 }
+@media (max-width: 600px){
+    .card{
+        width: 30vw;
+        height: 17.5vh; 
+    }
+    h2{
+    font-size: 2vh;
+    }
+}

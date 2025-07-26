@@ -8,6 +8,23 @@ import {RouterLink} from '@angular/router';
   styleUrl: './nav-bar.css'
 })
 export class NavBar {
-  width = window.innerWidth
+  menuStatus: boolean
 
+  constructor(){
+    this.menuStatus = false
+  }
+
+  openCloseMenu() :void{
+    this.menuStatus = (this.menuStatus)? false : true
+
+    if(this.menuStatus){
+      document.getElementById("nav-bar")?.classList.add("translate")
+      document.getElementById("menu-links")?.classList.add("translate")
+      document.getElementById("menu-btn")?.classList.add("translate")
+      return
+    }
+    document.getElementById("menu-btn")?.classList.remove("translate")
+    document.getElementById("nav-bar")?.classList.remove("translate")
+    document.getElementById("menu-links")?.classList.remove("translate")
+  }
 }

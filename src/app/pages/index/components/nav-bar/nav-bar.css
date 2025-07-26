@@ -116,7 +116,6 @@
     .list-element{
         margin: 0.5vh 0.5vh;
     }
-}
     .translate{
         transition: transform 0.3s;
         transform: translateY(-21vh);

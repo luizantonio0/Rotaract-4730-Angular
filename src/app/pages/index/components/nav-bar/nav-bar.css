@@ -75,10 +75,16 @@
         margin-left: 1vw;
         transition: transform 0.3s;
     }
+    .left-card{
+        margin-left: 1vw;
+        transition: transform 0.3s;
+    }
     .container-links{
         display: none;
     }
     .left-card img{
+        height: 10vh;
+        width: 40vw;
         height: 10vh;
         width: 40vw;
     }
@@ -88,6 +94,8 @@
     }
     .card-menu{
         display: flex;
+        justify-content: center;
+        width: 100vw;
         justify-content: center;
         width: 100vw;
         height: fit-content;
@@ -101,6 +109,14 @@
     .list-links{
         flex-direction: column;
     }
+    .translate{
+        transition: transform 0.3s;
+        transform: translateY(-21vh);
+    }
+    .list-element{
+        margin: 0.5vh 0.5vh;
+    }
+}
     .translate{
         transition: transform 0.3s;
         transform: translateY(-21vh);

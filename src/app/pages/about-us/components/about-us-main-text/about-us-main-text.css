@@ -1,0 +1,37 @@
+body{
+    overflow: hidden;
+}
+.container{
+    margin-top: 5vh;
+    margin-left: 5vw;
+    margin-right: 5vw;
+}
+.top-content{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+
+.top-content-image img{
+    border-radius: 40px;
+    width: 30vw;
+    border: 0.3vw solid #333;
+}
+.top-content-text{
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    margin-left: 5vw;
+}
+.bottom-content{
+    margin-top: 3vh;
+}
+h1{
+    text-align: center;
+    font-size: 3vw;
+}
+p{
+    text-align: justify;
+    font-size: 1.4vw;
+}

@@ -13,7 +13,6 @@ export class NavBar {
   constructor(){
     this.menuStatus = false
   }
-
   openCloseMenu() :void{
     this.menuStatus = (this.menuStatus)? false : true
 

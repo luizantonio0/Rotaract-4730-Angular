@@ -66,23 +66,46 @@
 .card-menu{
     display: none;
 }
+.container-menu{
+    display: none;
+}
 
 @media (max-width: 600px){
+    .left-card{
+        margin-left: 1vw;
+        transition: transform 0.3s;
+    }
     .container-links{
         display: none;
     }
     .left-card img{
-    height: 10vh;
-    width: 40vw;
+        height: 10vh;
+        width: 40vw;
+    }
+    .right-card{
+        margin-right: 4vw;
+        transition: transform 0.3s;
     }
     .card-menu{
         display: flex;
-        width: 50vw;
+        justify-content: center;
+        width: 100vw;
         height: fit-content;
-        background-color: #18800f;
-        transform: translateY(12vh);
+        background-color: var(--puple-color);
+        transform: translateY(0vh);
+        transition: transform 0.3s;
+    }
+    .container-menu{
+        display: flex;
     }
     .list-links{
         flex-direction: column;
+    }
+    .translate{
+        transition: transform 0.3s;
+        transform: translateY(-21vh);
+    }
+    .list-element{
+        margin: 0.5vh 0.5vh;
     }
 }

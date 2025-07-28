@@ -1,0 +1,15 @@
+.page{
+    margin: 0 2vw;
+}
+.card{
+    border: 2px solid #333;
+    border-radius: 2vw;
+    width: fit-content;
+    height: fit-content;
+}
+.card-list{
+    margin: 0 2vw;
+}
+.card-title{
+    margin: 0 2vw;
+}

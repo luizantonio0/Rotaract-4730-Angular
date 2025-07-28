@@ -13,3 +13,13 @@ body {
     background-color: #fff9fc;
     overflow-x: hidden;
 }
+h1, h2, h3{
+    text-align: center;
+}
+h1{
+    font-size: 3vw;
+}
+p{
+    text-align: justify;
+    font-size: 1.4vw;
+}

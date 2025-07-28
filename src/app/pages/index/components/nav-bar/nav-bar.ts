@@ -8,6 +8,11 @@ import {RouterLink} from '@angular/router';
   styleUrl: './nav-bar.css'
 })
 export class NavBar {
+  protected readonly links: string[] =[
+    "/about-us",
+    "/transparency-portal",
+    "/contacts"
+  ]
   menuStatus: boolean
 
   constructor(){

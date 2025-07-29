@@ -2,7 +2,6 @@ body{
     overflow: hidden;
 }
 .container{
-    margin-top: 5vh;
     margin-left: 5vw;
     margin-right: 5vw;
 }
@@ -26,4 +25,34 @@ body{
 }
 .bottom-content{
     margin-top: 3vh;
+}
+.top-content-title-mobile{
+    display: none;
+}
+@media(max-width: 600px){
+    .top-content-title-mobile{
+        display: block;
+    }
+    .top-content-title{
+        display: none;
+    }
+    .top-content{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .top-content-image img{
+        border-radius: 20px;
+        width: 80vw;
+        border: 0.3vw solid #333;
+    }
+    .top-content-text{
+        justify-content: center;
+        margin-left: 0;
+    }
+    p{
+        justify-self: center;
+        width: 80vw;
+    }
 }

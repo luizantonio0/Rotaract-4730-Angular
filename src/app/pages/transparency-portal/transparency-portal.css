@@ -1,15 +1,20 @@
 .page{
-    margin: 0 2vw;
+    margin: 12vh 5vh;
 }
-.card{
-    border: 2px solid #333;
-    border-radius: 2vw;
-    width: fit-content;
-    height: fit-content;
+.card-container{
+    margin-top: 5vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 5vw;
 }
-.card-list{
-    margin: 0 2vw;
+@media (max-width: 600px) {
+    .card-container{
+        flex-direction: column;
+        justify-content: center;
+        flex-wrap: nowrap;
+    }
 }
-.card-title{
-    margin: 0 2vw;
+app-transparency-card{
+    justify-self: center;
 }

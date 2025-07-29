@@ -1,0 +1,24 @@
+.card{
+    border: 0.5vh solid #333;
+    border-radius: 2vw;
+    width: fit-content;
+    height: fit-content;
+    justify-self: center;
+}
+.card-list{
+    margin: 0 2vw;
+    justify-self: center;
+}
+.card-title{
+    margin: 0 2vw;
+}
+h3{
+    font-size: 3.5vh;
+}
+span{
+
+    font-size: 2vh;
+}
+a{
+    font-size: 2.5vh;
+}

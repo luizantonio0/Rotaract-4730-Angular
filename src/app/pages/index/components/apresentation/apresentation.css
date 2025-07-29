@@ -12,3 +12,8 @@
     font-size: 4.5vw;
     text-shadow: 0 0 10px rgba(0,0,0,0.8);
 }
+@media (max-width: 600px) {
+    .container{
+        height: 50%;
+    }
+}

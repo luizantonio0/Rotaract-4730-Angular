@@ -1,3 +1,10 @@
+.container{
+    position: fixed; /* ou absolute, relative, sticky */
+    z-index: 9999; /* valor alto para garantir que fique por cima */
+    top: 0;
+    left: 0;
+    width: 100vw;
+}
 .nav-bar{
     display: flex;
     flex-direction: row;

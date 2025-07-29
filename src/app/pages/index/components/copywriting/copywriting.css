@@ -12,9 +12,3 @@ h2, p{
     flex-direction: column;
     width: 80vw;
 }
-h2{
-    font-size: 3vw;
-}
-p{
-    font-size: 1.8vw;
-}

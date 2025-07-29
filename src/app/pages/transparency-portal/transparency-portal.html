@@ -1,26 +1,17 @@
-<app-nav-bar></app-nav-bar>
+
 <div class="page">
     <div class="title">
         <h1>PORTAL DA TRANSPARÊNCIA</h1>
         
     </div>
     <div class="card-container">
-        <div class="card">
-            <div class="card-title">
-                <h3>ATAS DAS REUNIÕES</h3>
-            </div>
-            <div class="card-list">
-                <ul>
-                    <li>TESTE</li>
-                    <li>TESTE</li>
-                    <li>TESTE</li>
-                </ul>
-            </div>            
-        </div>
-        <!-- <div class="card">
-            <div class="card-title"></div>
-            <div class="card-list"></div>
-        </div> -->
+        @for (card of arrCards; track card) {
+            <app-transparency-card
+                [linksCard]="card.linksCard"
+                [title]="card.title"
+                [description]="card.description"
+            ></app-transparency-card>
+        }
     </div>
 </div>
 

@@ -1,5 +1,4 @@
-import { Component } from '@angular/core';
-import { NavBar } from "./components/nav-bar/nav-bar";
+import { Component} from '@angular/core';
 import { Apresentation } from "./components/apresentation/apresentation";
 import { CardRow } from "./components/card-row/card-row";
 import { Copywriting } from "./components/copywriting/copywriting";
@@ -8,11 +7,12 @@ import { DataItem } from "./components/rotaract-data/rotaract-data"
 
 @Component({
   selector: 'app-index',
-  imports: [NavBar, Apresentation, CardRow, Copywriting, RotaractData],
+  imports: [Apresentation, CardRow, Copywriting, RotaractData],
   templateUrl: './index.html',
   styleUrl: './index.css'
 })
 export class Index {
+
   rotaractDataList: DataItem[] = [
     { quantity: 60, unitMeasure: " anos", description: "de existência" },
     { quantity: 6, unitMeasure: " milhões", description: "arrecadados e doados em projetos" },

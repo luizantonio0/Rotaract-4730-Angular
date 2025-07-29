@@ -1,0 +1,18 @@
+<div class="card">
+    <div class="card-title">
+        <h3>{{title}}</h3>
+        <span>{{description}}</span>
+    </div>
+    <div class="card-list">
+        <ul>
+            @for (link of linksCard; track link) {
+            <li>
+                <a [href]="link.linkHref">
+                    {{link.linkName}}
+                </a>
+            </li>
+            }
+        </ul>
+    </div>            
+</div>
+

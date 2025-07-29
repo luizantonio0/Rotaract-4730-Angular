@@ -28,7 +28,7 @@ p{
 }
 @media (max-width: 600px) {
     h1, h2{
-        font-size: 5vh;
+        font-size: 4.5vh;
     }
     p{
         font-size: 2vh

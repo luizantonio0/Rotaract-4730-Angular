@@ -3,19 +3,12 @@
         <h1>PROJETOS</h1>
     </div>
     <div class="card-container">
-        <div class="card">
-            <div class="card-image">
-                <img src="./foto-grupo-rotaract.png" alt="">
-            </div>
-            <div class="card-text">
-                <div class="card-text-title">
-                    <h2>Projeto 1</h2>
-                </div>
-                <div class="card-text-paragraph">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur officia alias suscipit? In, repudiandae officiis similique corporis pariatur, sit beatae fugit aspernatur modi animi reiciendis? Obcaecati sunt harum quasi beatae.
-                    Voluptas eum commodi ipsa molestiae labore voluptatibus accusantium beatae! Minima quaerat pariatur quas vitae ut natus illum aut, sit nemo omnis delectus cumque porro. Fugit autem aspernatur fugiat enim quo?</p>
-                </div>
-            </div>
-        </div>
+        <app-project-card
+        [title]="'Projeto 1'"
+        [content]="'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur officia alias suscipit? In, repudiandae officiis similique corporis pariatur, sit beatae fugit aspernatur modi animi reiciendis? Obcaecati sunt harum quasi beatae.
+            Voluptas eum commodi ipsa molestiae labore voluptatibus accusantium beatae! Minima quaerat pariatur quas vitae ut natus illum aut, sit nemo omnis delectus cumque porro. Fugit autem aspernatur fugiat enim quo?
+     '"
+        ></app-project-card>
+        
     </div>
 </div>

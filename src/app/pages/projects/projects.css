@@ -1,10 +1,4 @@
 .page{
     margin: 0 2vw;
-}
-img{
-    width: 30vw;
-}
-.card{
-    display: flex;
-    flex-direction: row;
+    margin-top: 12vh;
 }

@@ -8,5 +8,7 @@ export class MemberService {
   defaultUrl = new DefaltURLs()
   getAll(){
     fetch(this.defaultUrl.DEFAUT_ROUTE + "members")
+    .then(response => response.json())
+    .then()
   }
 }

@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { MemberCard } from "./components/member-card/member-card";
 import { MemberService } from '../../services/member-service';
+import { MemberData } from '../../models/MemberData';
 
 @Component({
   selector: 'app-members',
@@ -9,9 +10,15 @@ import { MemberService } from '../../services/member-service';
   styleUrl: './members.css'
 })
 export class Members implements OnInit {
-  member: any
+  members: MemberData[] = []
   constructor(private service: MemberService){}
   ngOnInit(): void {
-      this. member = this.service.getAll("member")
+      this.service.getAll("member").subscribe({
+        next: (res) => {
+          this.members = Array.isArray(res) ? res : [res]
+          console.log(res)
+        },
+        error: (err) => console.log(err)
+      })
   }
 }

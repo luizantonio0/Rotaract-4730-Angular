@@ -2,11 +2,14 @@
     <div class="title">
         <h1>CONHEÇA NOSSOS ASSOCIADOS</h1>
     </div>
-    <div class="card-container">
-        <app-member-card
-        [name]="member[0]?.name"
-        [description]="'Testrue'"
-        [image]="'aaa'"
-        ></app-member-card>
-    </div>
+    @for (member of members; track member) {
+        <div class="card-container">
+            <app-member-card
+            [name]="member.name"
+            [description]="member.description"
+            [image]="member.image"
+            ></app-member-card>
+        </div>
+    }
+    
 </div>

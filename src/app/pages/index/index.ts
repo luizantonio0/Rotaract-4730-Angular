@@ -4,10 +4,11 @@ import { CardRow } from "./components/card-row/card-row";
 import { Copywriting } from "./components/copywriting/copywriting";
 import { RotaractData } from "./components/rotaract-data/rotaract-data";
 import { DataItem } from "./components/rotaract-data/rotaract-data"
+import { Footer } from "./components/footer/footer";
 
 @Component({
   selector: 'app-index',
-  imports: [Apresentation, CardRow, Copywriting, RotaractData],
+  imports: [Apresentation, CardRow, Copywriting, RotaractData, Footer],
   templateUrl: './index.html',
   styleUrl: './index.css'
 })

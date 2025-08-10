@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
+import { Footer } from "../index/components/footer/footer";
 
 @Component({
   selector: 'app-contacts',
-  imports: [],
+  imports: [Footer],
   templateUrl: './contacts.html',
   styleUrl: './contacts.css'
 })

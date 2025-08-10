@@ -2,9 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { TransparencyCard } from "./components/transparency-card/transparency-card";
 import { TransparencyData } from '../../models/TransparencyData';
 import { ComponentService } from '../../services/component-service';
+import { Footer } from "../index/components/footer/footer";
 @Component({
   selector: 'app-transparency-portal',
-  imports: [TransparencyCard],
+  imports: [TransparencyCard, Footer],
   templateUrl: './transparency-portal.html',
   styleUrl: './transparency-portal.css'
 })

@@ -2,10 +2,11 @@ import { Component, Input, OnInit } from '@angular/core';
 import { MemberCard } from "./components/member-card/member-card";
 import { MemberData } from '../../models/MemberData';
 import { ComponentService } from '../../services/component-service';
+import { Footer } from "../index/components/footer/footer";
 
 @Component({
   selector: 'app-members',
-  imports: [MemberCard],
+  imports: [MemberCard, Footer],
   templateUrl: './members.html', 
   styleUrl: './members.css'
 })

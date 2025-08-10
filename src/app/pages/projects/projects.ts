@@ -2,9 +2,10 @@ import { Component } from '@angular/core';
 import { ProjectCard } from "./components/project-card/project-card";
 import { ComponentService } from '../../services/component-service';
 import { ProjectData } from '../../models/ProjectData';
+import { Footer } from "../index/components/footer/footer";
 @Component({
   selector: 'app-projects',
-  imports: [ProjectCard],
+  imports: [ProjectCard, Footer],
   templateUrl: './projects.html',
   styleUrl: './projects.css'
 })

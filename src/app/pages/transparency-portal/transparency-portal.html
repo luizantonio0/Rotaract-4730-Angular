@@ -4,11 +4,14 @@
         <h1>PORTAL DA TRANSPARÊNCIA</h1>
     </div>
     <div class="card-container">
-        @for (card of arrCards; track card) {
+        @for (transparency of transparencyCard; track transparency) {
             <app-transparency-card
-                [linksCard]="card.linksCard"
-                [title]="card.title"
-                [description]="card.description"
+                [title]="transparency.title"
+                [description]="transparency.description"
+                [linksCard]="[{
+                    linkHref: transparency.documentUrl,
+                    linkName: 'olá'
+                }]"
             ></app-transparency-card>
         }
     </div>

@@ -3,12 +3,11 @@
         <h1>PROJETOS</h1>
     </div>
     <div class="card-container">
+        @for (p of projects; track p) {
         <app-project-card
-        [title]="'Projeto 1'"
-        [content]="'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur officia alias suscipit? In, repudiandae officiis similique corporis pariatur, sit beatae fugit aspernatur modi animi reiciendis? Obcaecati sunt harum quasi beatae.
-            Voluptas eum commodi ipsa molestiae labore voluptatibus accusantium beatae! Minima quaerat pariatur quas vitae ut natus illum aut, sit nemo omnis delectus cumque porro. Fugit autem aspernatur fugiat enim quo?
-     '"
+        [title]="p.name"
+        [content]="p.description"
         ></app-project-card>
-        
+        }
     </div>
 </div>

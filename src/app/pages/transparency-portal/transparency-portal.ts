@@ -1,19 +1,29 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { TransparencyCard } from "./components/transparency-card/transparency-card";
+import { TransparencyData } from '../../models/TransparencyData';
+import { ComponentService } from '../../services/component-service';
 @Component({
   selector: 'app-transparency-portal',
   imports: [TransparencyCard],
   templateUrl: './transparency-portal.html',
   styleUrl: './transparency-portal.css'
 })
-export class TransparencyPortal {
-  arrCards: TransparencyCard[] = []
-  constructor(){
-    for (let i = 0; i < 10; i++) {
-    this.arrCards.push({title: "ATAS DAS REUNIÕES", description: "Selecione a gestão desejada:", linksCard: [{linkName: "Gestão 2025/2026", linkHref: "/about-us"}, {linkName: "TEStestse", linkHref: "#"}]})
-  }
+export class TransparencyPortal implements OnInit {
+  transparencyCard: TransparencyData[]
+
+  constructor(private service: ComponentService){
+    this.service.getAll<TransparencyData>("transparency").subscribe({
+      next:(res) => {
+        this.transparencyCard = Array.isArray(res)? res: [res]
+        console.log(this.transparencyCard)
+        return   
+      },
+      error: (err) => console.log(err)
+    })
+    this.transparencyCard = []
   }
   
+  ngOnInit(): void {
     
-  
+  }
 }

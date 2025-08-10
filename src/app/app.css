@@ -18,12 +18,5 @@ html, body {
     .bg-img{
         height: 40vh;
     }
-    app-footer{
-        margin-top: 220vh;
-    }
-}
-@media (max-width: 380px) {
-    app-footer{
-        margin-top: 233vh;
-    }
+
 }

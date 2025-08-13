@@ -3,7 +3,7 @@
         <h1>PROJETOS</h1>
     </div>
     <div class="card-container">
-        @for (p of projects; track p) {
+        @for (p of projects(); track p) {
         <app-project-card
         [title]="p.name"
         [content]="p.description"

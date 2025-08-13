@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 import { ProjectCard } from "./components/project-card/project-card";
 import { ComponentService } from '../../services/component-service';
 import { ProjectData } from '../../models/ProjectData';
@@ -10,14 +10,14 @@ import { Footer } from "../index/components/footer/footer";
   styleUrl: './projects.css'
 })
 export class Projects {
-  projects: ProjectData[] = []
+  projects = signal<ProjectData[]>([])
   
     constructor(private service: ComponentService){}
     ngOnInit(): void {
         this.service.getAll<ProjectData>("project").subscribe({
           next: (res) => {
-            this.projects = Array.isArray(res) ? res : [res]
-            console.log(this.projects)
+            this.projects.set(Array.isArray(res) ? res : [res])
+            console.log(this.projects())
           },
           error: (err) => console.log(err)
         })

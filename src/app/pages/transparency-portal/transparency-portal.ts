@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, signal, Signal } from '@angular/core';
 import { TransparencyCard } from "./components/transparency-card/transparency-card";
 import { TransparencyData } from '../../models/TransparencyData';
 import { ComponentService } from '../../services/component-service';
@@ -10,21 +10,19 @@ import { Footer } from "../index/components/footer/footer";
   styleUrl: './transparency-portal.css'
 })
 export class TransparencyPortal implements OnInit {
-  transparencyCard: TransparencyData[]
+  // Criando o Signal
+  transparencyCard = signal<TransparencyData[]>([]);
 
-  constructor(private service: ComponentService){
-    this.service.getAll<TransparencyData>("transparency").subscribe({
-      next:(res) => {
-        this.transparencyCard = Array.isArray(res)? res: [res]
-        console.log(this.transparencyCard)
-        return   
-      },
-      error: (err) => console.log(err)
-    })
-    this.transparencyCard = []
-  }
-  
+  constructor(private service: ComponentService) {}
+
   ngOnInit(): void {
-    
+    this.service.getAll<TransparencyData>('transparency').subscribe({
+      next: (res) => {
+        const data = Array.isArray(res) ? res : [res];
+        this.transparencyCard.set(data); // Atualiza o Signal
+        console.log(this.transparencyCard()); // Lê o valor
+      },
+      error: (err) => console.error(err),
+    });
   }
 }

@@ -2,7 +2,7 @@
     <div class="title">
         <h1>CONHEÇA NOSSOS ASSOCIADOS</h1>
     </div>
-    @for (member of members; track member) {
+    @for (member of members(); track member) {
         <div class="card-container">
             <app-member-card
             [name]="member.name"

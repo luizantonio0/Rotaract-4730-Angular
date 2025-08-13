@@ -1,14 +1,13 @@
-import { Component, Input, OnInit, signal } from '@angular/core';
+import { Component, OnInit, signal } from '@angular/core';
 import { MemberCard } from "./components/member-card/member-card";
 import { MemberData } from '../../models/MemberData';
 import { ComponentService } from '../../services/component-service';
 import { Footer } from "../index/components/footer/footer";
-import { ButtonModule } from 'primeng/button';
 
 @Component({
   selector: 'app-members',
-  imports: [MemberCard, Footer, ButtonModule],
-  templateUrl: './members.html', 
+  imports: [MemberCard, Footer],
+  templateUrl: './members.html',
   styleUrl: './members.css'
 })
 export class Members implements OnInit {

@@ -4,17 +4,23 @@
         <h1>PORTAL DA TRANSPARÊNCIA</h1>
     </div>
     <div class="card-container">
-        @for (transparency of transparencyCard(); track transparency) {
-            <app-transparency-card
-                [title]="transparency.title"
-                [description]="transparency.description"
-                [linksCard]="[{
-                    linkHref: transparency.documentUrl,
-                    linkName: 'link do documento'
-                }]"
-            ></app-transparency-card>
-        }
+        <p-accordion [style]="{'justify-self' : 'center'}">
+            @for (t of transparencyCard(); track t) {
+                <p-accordion-panel [value]="transparencyCard().indexOf(t) + 1">
+                    <p-accordion-header>{{t.title}}</p-accordion-header>
+                    <p-accordion-content>
+                        <p class="m-0">
+                            {{t.description}}
+                        </p>
+                        <div>
+                            <a [href]="t.documentUrl">{{t.documentUrl}}</a>
+                        </div>
+                        
+                    </p-accordion-content>
+                </p-accordion-panel>
+            }
+        </p-accordion>
     </div>
-    <app-footer></app-footer>
 </div>
+<app-footer></app-footer>
 

@@ -1,11 +1,11 @@
-import { Component, OnInit, signal, Signal } from '@angular/core';
-import { TransparencyCard } from "./components/transparency-card/transparency-card";
+import { Component, OnInit, signal} from '@angular/core';
 import { TransparencyData } from '../../models/TransparencyData';
 import { ComponentService } from '../../services/component-service';
 import { Footer } from "../index/components/footer/footer";
+import { AccordionModule } from 'primeng/accordion';
 @Component({
   selector: 'app-transparency-portal',
-  imports: [TransparencyCard, Footer],
+  imports: [Footer, AccordionModule],
   templateUrl: './transparency-portal.html',
   styleUrl: './transparency-portal.css'
 })

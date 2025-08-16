@@ -2,6 +2,15 @@
     <div class="title">
         <h1>PROJETOS</h1>
     </div>
+    <p-galleria [value]="projects()"[containerStyle]="{ 'max-width': '640px' }" [numVisible]="5">
+    <ng-template #item let-p>
+        <img [src]="p.image" style="width:100%" />
+        <h2>{{p.name}}</h2>
+    </ng-template>
+    <ng-template #thumbnail let-p>
+        <img [src]="p.image" />
+    </ng-template>
+</p-galleria>
     <div class="card-container">
         @for (p of projects(); track p) {
         <app-project-card

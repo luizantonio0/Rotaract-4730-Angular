@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class ComponentService {
-  private DEFAULT_URL: string = "https://rotaract-4730-java.onrender.com/"
+  private DEFAULT_URL: string = "http://localhost:8080/"
 
   constructor(private http: HttpClient){}
 

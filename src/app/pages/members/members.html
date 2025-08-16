@@ -2,14 +2,16 @@
     <div class="title">
         <h1>CONHEÇA NOSSOS ASSOCIADOS</h1>
     </div>
-    @for (member of members(); track member) {
-        <div class="card-container">
-            <app-member-card
+    <p-carousel 
+    style="justify-content: center"
+    [value]="members()" [numVisible]="3" [numScroll]="1" [responsiveOptions]="responsiveOptions" [circular]="true" autoplayInterval="4000">
+    <ng-template let-member #item>
+            <app-p-member-card
             [name]="member.name"
             [description]="member.description"
-            [image]="member.image"
-            ></app-member-card>
-        </div>
-    }
+            [image]="member.image">
+            </app-p-member-card>
+    </ng-template>
+</p-carousel>
     <app-footer></app-footer>
 </div>

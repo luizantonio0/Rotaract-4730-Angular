@@ -1,0 +1,17 @@
+<p-card
+[style]="{ 'justify-self': 'center', minWidth: '290px', width: '25dvw', overflow: 'hidden' }">
+    <ng-template #header>
+        <img src="./foto-membro-arthur.png" [alt]="'picture of member ' + name">
+    </ng-template>
+    <ng-template #title> {{name}} </ng-template>
+    <ng-template #subtitle> Membro do clube rotaract </ng-template>
+    <p>
+        {{description}}
+    </p>
+    <ng-template #footer>
+        <div>
+            <button style="background-color: red;">Eliminar</button>
+            <button>Deixar vivo</button>
+        </div>
+    </ng-template>
+</p-card>

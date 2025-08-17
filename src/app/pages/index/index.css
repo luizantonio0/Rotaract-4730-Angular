@@ -1,15 +1,22 @@
 .bg-img{
-    background-image: none
+    background-image: url('./assets/bg-image.png');
+    background-size: cover;        
+    background-position: center;   
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 100vh;
 }
 .top-container{
     width: 100vw;
     height: 80vh;
 }
+
 @media(max-width: 600px){
     .bg-img{
-        height: 90vh;
+        height: 40vh;
     }
     .top-container{
-        height: 50%;
+        width: 100vw;
+        height: 45vh;
     }
 }

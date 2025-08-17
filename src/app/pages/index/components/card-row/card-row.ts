@@ -10,9 +10,9 @@ import { CardLinks } from "./card-links/card-links";
 export class CardRow {
   
   cardList: Card[] = [
-    { name: "PROJETOS", image: "./foto-membro-raphael.png", link: "/projects" },
-    { name: "PODCAST", image: "./foto-membro-laura.png", link: "/podcast"},
-    { name: "ASSOCIADOS", image: "./foto-membro-arthur.png", link: "/members" }
+    { name: "PROJETOS", image: "./members/foto-membro-raphael.png", link: "/projects" },
+    { name: "PODCAST", image: "./members/foto-membro-laura.png", link: "/podcast"},
+    { name: "ASSOCIADOS", image: "./members/foto-membro-arthur.png", link: "/members" }
   ]
 }
 type Card = {

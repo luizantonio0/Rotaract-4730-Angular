@@ -1,0 +1,9 @@
+.member-image{
+    width: 30vw;
+    height: calc(30vw / 1.5);
+    min-width: 400px;
+    min-height: calc(400px / 1.5);
+}
+.description{
+    font-size: larger;
+}

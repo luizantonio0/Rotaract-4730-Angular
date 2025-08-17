@@ -1,17 +1,13 @@
 <p-card
-[style]="{ 'justify-self': 'center', minWidth: '290px', width: '25dvw', overflow: 'hidden' }">
+[style]="{ 'justify-self': 'center', minWidth: '290px', width: '25dvw', overflow: 'hidden', maxHeight: '650px' }">
     <ng-template #header>
-        <img src="./foto-membro-arthur.png" [alt]="'picture of member ' + name">
+        <img class="member-image" [src]="'members/' + image" [alt]="'picture of member ' + name">
     </ng-template>
     <ng-template #title> {{name}} </ng-template>
-    <ng-template #subtitle> Membro do clube rotaract </ng-template>
-    <p>
+    <ng-template #subtitle>{{ role == "" ? "Membro": role }} do clube rotaract </ng-template>
+    <p class="description">
         {{description}}
     </p>
     <ng-template #footer>
-        <div>
-            <button style="background-color: red;">Eliminar</button>
-            <button>Deixar vivo</button>
-        </div>
     </ng-template>
 </p-card>

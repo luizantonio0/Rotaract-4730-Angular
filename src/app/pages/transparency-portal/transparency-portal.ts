@@ -19,8 +19,7 @@ export class TransparencyPortal implements OnInit {
     this.service.getAll<TransparencyData>('transparency').subscribe({
       next: (res) => {
         const data = Array.isArray(res) ? res : [res];
-        this.transparencyCard.set(data); // Atualiza o Signal
-        console.log(this.transparencyCard()); // Lê o valor
+        this.transparencyCard.set(data); 
       },
       error: (err) => console.error(err),
     });

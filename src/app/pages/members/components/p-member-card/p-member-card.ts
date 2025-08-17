@@ -12,4 +12,5 @@ export class PMemberCard {
   @Input() name!: string
   @Input() description!: string
   @Input() image: string = "/foto-grupo-rotaract-about-us.png"
+  @Input() role: string = "Membro"
 }

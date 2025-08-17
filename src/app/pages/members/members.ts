@@ -1,5 +1,4 @@
 import { Component, OnInit, signal } from '@angular/core';
-import { MemberCard } from "./components/member-card/member-card";
 import { MemberData } from '../../models/MemberData';
 import { ComponentService } from '../../services/component-service';
 import { Footer } from "../index/components/footer/footer";
@@ -9,7 +8,7 @@ import { ButtonModule } from 'primeng/button';
 
 @Component({
   selector: 'app-members',
-  imports: [MemberCard, Footer, PMemberCard, CarouselModule, ButtonModule],
+  imports: [Footer, PMemberCard, CarouselModule, ButtonModule],
   templateUrl: './members.html',
   styleUrl: './members.css'
 })
@@ -40,7 +39,6 @@ responsiveOptions: any[] = [
       this.service.getAll<MemberData>("member").subscribe({
         next: (res) => {
           this.members.set(Array.isArray(res) ? res : [res])
-          console.log(this.members())
         },
         error: (err) => console.log(err)
       })

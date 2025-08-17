@@ -2,3 +2,36 @@
     margin: 0 2vw;
     margin-top: 12vh;
 }
+.card-picture{
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 80vw;
+    height: calc(80vw / 1.97);
+    min-width: 290px;
+    max-width: 1300px;
+    max-height: calc(1300px / 1.97);
+}
+.card-container{
+
+    justify-self: center;
+}
+h2{
+    text-shadow: 0 0 10px rgba(0,0,0,0.8);
+    color: var(--main-text-color);
+    margin-top: 5%;
+    text-align: center;
+    font-size: 40px;
+}
+.thumbnail{
+    min-width: 80px;
+    min-height: calc(80px / 1.97);
+    width: 10vw;
+    height: calc(10vw / 1.97);
+}
+@media (max-width: 600px){
+    h2{
+        text-align: center;
+        font-size: 25px;
+    }
+}

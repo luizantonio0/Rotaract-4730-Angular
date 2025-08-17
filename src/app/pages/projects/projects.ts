@@ -18,7 +18,6 @@ export class Projects {
         this.service.getAll<ProjectData>("project").subscribe({
           next: (res) => {
             this.projects.set(Array.isArray(res) ? res : [res])
-            console.log(this.projects())
           },
           error: (err) => console.log(err)
         })

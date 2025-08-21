@@ -1,3 +1,3 @@
 export class DEFAULT_URL{
-    url: string = "https://rotaract-parque-barigui.netlify.app/"
+    url: string = "https://rotaract-4730-java.onrender.com/"
 }

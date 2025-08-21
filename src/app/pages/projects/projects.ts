@@ -1,12 +1,11 @@
 import { Component, signal } from '@angular/core';
-import { ProjectCard } from "./components/project-card/project-card";
 import { ComponentService } from '../../services/component-service';
 import { ProjectData } from '../../models/ProjectData';
 import { Footer } from "../index/components/footer/footer";
 import { GalleriaModule } from 'primeng/galleria';
 @Component({
   selector: 'app-projects',
-  imports: [ProjectCard, Footer, GalleriaModule],
+  imports: [Footer, GalleriaModule],
   templateUrl: './projects.html',
   styleUrl: './projects.css'
 })

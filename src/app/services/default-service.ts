@@ -6,13 +6,12 @@ import { DEFAULT_URL } from './defaultURL';
 @Injectable({
   providedIn: 'root'
 })
-export class ComponentService {
-  private DEFAULT_URL: string = new DEFAULT_URL().url
+export class DefaultService {
+  private DEFAULT_URL: string = new DEFAULT_URL().url 
 
   constructor(private http: HttpClient){}
 
-
-  getAll<T>(path: string): Observable<T> {
-    return this.http.get<T>(this.DEFAULT_URL + path)
+  getAll(): Observable<string>{
+    return this.http.get<string>(this.DEFAULT_URL)
   }
 }

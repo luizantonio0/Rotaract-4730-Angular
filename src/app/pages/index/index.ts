@@ -5,6 +5,7 @@ import { Copywriting } from "./components/copywriting/copywriting";
 import { RotaractData } from "./components/rotaract-data/rotaract-data";
 import { DataItem } from "./components/rotaract-data/rotaract-data"
 import { Footer } from "./components/footer/footer";
+import { DefaultService } from '../../services/default-service';
 
 @Component({
   selector: 'app-index',
@@ -13,6 +14,15 @@ import { Footer } from "./components/footer/footer";
   styleUrl: './index.css'
 })
 export class Index {
+
+  constructor(private service: DefaultService){
+    console.log(
+      this.service.getAll().subscribe({
+        next: (res) => console.log(res),
+        error: (err) => console.error(err) 
+      })
+    )
+  }
 
   rotaractDataList: DataItem[] = [
     { quantity: 60, unitMeasure: " anos", description: "de existência" },

@@ -1,18 +1,19 @@
-import { Component, OnInit, signal } from '@angular/core';
+import { Component, OnChanges, OnInit, signal, SimpleChanges } from '@angular/core';
 import { MemberData } from '../../models/MemberData';
 import { ComponentService } from '../../services/component-service';
 import { Footer } from "../index/components/footer/footer";
 import { PMemberCard } from "./components/p-member-card/p-member-card";
 import { CarouselModule } from 'primeng/carousel';
 import { ButtonModule } from 'primeng/button';
+import { LoadingPage } from '../loading-page/loading-page';
 
 @Component({
   selector: 'app-members',
-  imports: [Footer, PMemberCard, CarouselModule, ButtonModule],
+  imports: [Footer, PMemberCard, CarouselModule, ButtonModule, LoadingPage],
   templateUrl: './members.html',
   styleUrl: './members.css'
 })
-export class Members implements OnInit {
+export class Members implements OnInit{
 
 responsiveOptions: any[] = [
     {
@@ -33,14 +34,18 @@ responsiveOptions: any[] = [
   ]
 
   members = signal<MemberData[]>([])
+  hideLoadingBar = signal<boolean> (false)
 
   constructor(private service: ComponentService){}
   ngOnInit(): void {
       this.service.getAll<MemberData>("member").subscribe({
         next: (res) => {
           this.members.set(Array.isArray(res) ? res : [res])
+          this.hideLoadingBar.set(true)
         },
-        error: (err) => console.log(err)
+        error: (err) => {
+          console.log(err)
+        }
       })
   }
 }

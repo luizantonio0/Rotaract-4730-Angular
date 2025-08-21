@@ -2,7 +2,12 @@
     <div class="title">
         <h1>PROJETOS</h1>
     </div>
-    
+    @if(!hideLoadingBar()){
+        <app-loading-page
+        [width]="'80dvw'"
+        >
+        </app-loading-page>
+    }
     <div class="card-container">
         <p-galleria [value]="projects()" [containerStyle]="{ 'min-width': '290px', 'max-width': '1300px' }" [numVisible]="5">
             <ng-template #item let-p>

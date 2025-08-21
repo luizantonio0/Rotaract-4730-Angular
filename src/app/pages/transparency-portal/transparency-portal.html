@@ -3,6 +3,12 @@
     <div class="title">
         <h1>PORTAL DA TRANSPARÊNCIA</h1>
     </div>
+    @if(!hideLoadingBar()){
+        <app-loading-page
+        [width]="'80dvw'"
+        >
+        </app-loading-page>
+    }
     <div class="card-container">
         <p-accordion [style]="{'justify-self' : 'center'}">
             @for (t of transparencyCard(); track t) {
